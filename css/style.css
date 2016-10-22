@@ -1,3 +1,28 @@
-*{
-  border:1px solid red
+/**{
+  border:1px solid red;
+}*/
+
+.round {
+  border-radius: 50%;
+  width:125px;
+  height:125px;
+  font-size: 200%;
+  margin:10px;
+  
+}
+
+.start{
+  margin-top:50px;
+  width:175px;
+
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.start button{
+  font-size: 200% !important;
+}
+
+.selection button{
+  margin:auto !important;
 }
