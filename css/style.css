@@ -26,3 +26,25 @@
 .selection button{
   margin:auto !important;
 }
+.title{
+  color: red;
+  text-align: center;
+  border: 1px solid;
+  border-color: black;
+
+}
+.name{
+  color: blue;
+  text-align: center;
+}
+
+.attr{
+  height: 200px;
+  padding: 150px;
+  text-align: center;
+  
+}
+.btn{
+  text-align: center;
+  
+}

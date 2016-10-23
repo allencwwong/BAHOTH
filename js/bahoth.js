@@ -1,3 +1,4 @@
+// var $ = JQuery;
 $(document).ready(function(){
 
 var chars = [
@@ -118,6 +119,110 @@ var chars = [
 
 }
 ];
-console.log(chars[5]);
+
+var charID = 0;
+var stats = chars[charID];
+
+  function addStat(stat){
+    var myStat = stat.split("-");
+    console.log(myStat);
+    console.log(stat);
+
+    myStat = myStat[1];
+    if(myStat === "speed" || myStat === "might"){
+      stats.physical[myStat]++;
+      initStatus(stats);
+    }
+    if(myStat === "knowledge" || myStat === "sanity"){
+      stats.mental[myStat]++;
+      initStatus(stats);
+    }    
+  }
+  
+ function subtStat(stat){
+    var myStat = stat.split("-");
+    myStat = myStat[1];
+   
+    if(myStat === "speed" && stats.physical[myStat] >= 1 || myStat === "might" && stats.physical[myStat] >= 1){
+      //alert(stats.physical[myStat]);
+      if(stats.physical[myStat]){
+        //call dead function
+      }
+      stats.physical[myStat]--;
+      initStatus(stats);
+    }  
+    if(myStat === "knowledge" && stats.physical[myStat] >= 1 || myStat === "sanity" && stats.mental[myStat] >= 1){
+      //alert(stats.physical[myStat]);
+      if(stats.mental[myStat]){
+        //call dead function
+      }
+      stats.mental[myStat]--;
+      initStatus(stats);
+    }    
+ } 
+
+function initStatus(){
+    $("#speed").html("").append("<h1>"+stats.physical.speed+"</h1>");
+    $("#sanity").html("").append("<h1>"+stats.mental.sanity+"</h1>");
+   $("#might").html("").append("<h1>"+stats.physical.might+"</h1>"); 
+     $("#knowledge").html("").append("<h1>"+stats.mental.knowledge+"</h1>");      
+  } 
+
+function status(){
+ 
+  initStatus(); 
+} 
+
+// generate list of players 
+function initListOfPlayers(){
+  for(var i=0;i<chars.length;i++){
+    $('.dropdown-menu').append("<li class='list-player' data-id='"+i+"'><a href='#"+chars[i].name+"'>"+chars[i].name+"</a></li>");
+  }
+}
+
+function selectPlayer(){
+  $('.list-player').on('click',function(){
+    charID = $(this).data("id");
+    stats = chars[charID];
+
+  $("#player-name h1").html("").append(chars[charID].name);
+  $("#player-details ul").html("").append(function(){
+    var str = "";
+    for(var attrs in chars[charID].info){
+      console.log(attrs); 
+      var attr = chars[charID].info[attrs];
+      str+="<li>"+"<b>"+attrs+"</b>"+":"+" "+attr+"</li>";
+    }
+      return str;
+  });
+  $("#sanity h1").html("").append(chars[charID].mental.sanity);
+  $("#knowledge h1").html("").append(chars[charID].mental.knowledge);
+  $("#speed h1").html("").append(chars[charID].physical.speed);
+  $("#might h1").html("").append(chars[charID].physical.might);
+
+    status(); 
+  });
+}
+
+function statAdjust(){
+    var stats = chars[charID];
+    $('.add-stat').on('click',function(){
+      
+      addStat($(this).attr("id"));
+    });
+
+    $('.subt-stat').on('click',function(){
+      //var stats = chars[charID];
+      subtStat($(this).attr("id"));
+    }); 
+}
+
+initListOfPlayers();
+selectPlayer();
+statAdjust();
+
+
+  
+
 });
-console.log("chivkrn tuesday");
+
