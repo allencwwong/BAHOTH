@@ -1,171 +1,72 @@
-// var $ = JQuery;
 $(document).ready(function(){
 
-var chars = [
-{
-  "name" : "Brandon Jaspers",
-  "info" : {
-  	"age" : "12",
-  	"height" : "5' 1",
-  	"weight" : "109 lbs",
-  	"hobbies" : "Computers, Camping, Hockey",
-  	"birthday" : "May 21st"
-  },
-  "mental" : {
-  	"sanity" : 4,
-  	"knowledge" : 3
-  },
-  "physical" : {
-  	"speed" : 4,
-  	"might" : 4
-  }
-},
-{
-  "name" : "Peter Akimoto",
-  "info" : {
-  	"age" : "13",
-  	"height" : "4' 11",
-  	"weight" : "98 lbs",
-  	"hobbies" : "Bugs, Basketball",
-  	"birthday" : "September 3rd"
-  },
-  "mental" : {
-  	"sanity" : 4,
-  	"knowledge" : 4
-  },
-  "physical" : {
-  	"speed" : 4,
-  	"might" : 3
-  }
-},
-
-{
-  "name" : "Zoe Ingstrom",
-  "info" : {
-  	"age" : "8",
-  	"height" : "3' 9",
-  	"weight" : "49 lbs",
-  	"hobbies" : "Dolls, Music",
-  	"birthday" : "November 5th"
-  },
-  "mental" : {
-  	"sanity" : 5,
-  	"knowledge" : 3
-  },
-  "physical" : {
-  	"speed" : 4,
-  	"might" : 3
-  }
-},
-
-{
-  "name" : "Missy Dubourde",
-  "info" : {
-  	"age" : "9",
-  	"height" : "4' 2",
-  	"weight" : "62 lbs",
-  	"hobbies" : "Swimming, Medicine",
-  	"birthday" : "February 14th"
-  },
-  "mental" : {
-  	"sanity" : 3,
-  	"knowledge" : 4
-  },
-  "physical" : {
-  	"speed" : 5,
-  	"might" : 3
-  }
-},
-
-{
-  "name" : "Father Rhinehardt",
-  "info" : {
-  	"age" : "62",
-  	"height" : "5' 9",
-  	"weight" : "185 lbs",
-  	"hobbies" : "Fencing, Gardening",
-  	"birthday" : "April 29th"
-  },
-  "mental" : {
-  	"sanity" : 6,
-  	"knowledge" : 4
-  },
-  "physical" : {
-  	"speed" : 3,
-  	"might" : 2
-  }
-},
-
-{
-  "name" : "Professor Longfellow",
-  "info" : {
-  	"age" : "57",
-  	"height" : "5' 11",
-  	"weight" : "153 lbs",
-  	"hobbies" : "Gaelic Music, Drama, Fine Wines ",
-  	"birthday" : "July 27th"
-  },
-  "mental" : {
-  	"sanity" : 3,
-  	"knowledge" : 5
-  },
-  "physical" : {
-  	"speed" : 4,
-  	"might" : 3
-  }
-},
-
-{
-
-}
-];
-
 var charID = 0;
-var stats = chars[charID];
+var myChar = chars[charID];
 
   function addStat(stat){
     var myStat = stat.split("-");
-    console.log(myStat);
-    console.log(stat);
+    myStat = myStat[1]+"Idx";
+    //console.log(myStat);
+    //console.log(stat);
 
-    myStat = myStat[1];
-    if(myStat === "speed" || myStat === "might"){
-      stats.physical[myStat]++;
-      initStatus(stats);
+    if(myStat === "speedIdx" && myChar.status[myStat] <= 7 || myStat === "mightIdx" && myChar.status[myStat] <= 7){
+      
+      console.log(myChar.status[myStat]++);
+      initStatus(myChar);
     }
-    if(myStat === "knowledge" || myStat === "sanity"){
-      stats.mental[myStat]++;
-      initStatus(stats);
+    if(myStat === "knowledgeIdx" && myChar.status[myStat] <= 7 || myStat === "sanityIdx" && myChar.status[myStat] <= 7){
+      myChar.status[myStat]++;
+      initStatus(myChar);
     }    
   }
   
  function subtStat(stat){
     var myStat = stat.split("-");
-    myStat = myStat[1];
+    myStat = myStat[1]+"Idx";
    
-    if(myStat === "speed" && stats.physical[myStat] >= 1 || myStat === "might" && stats.physical[myStat] >= 1){
-      //alert(stats.physical[myStat]);
-      if(stats.physical[myStat]){
+    if(myStat === "speedIdx" && myChar.status[myStat] >= 1 || myStat === "mightIdx" && myChar.status[myStat] >= 1){
+      //alert(myChar.physical[myStat]);
+      if(myChar.status[myStat]){
         //call dead function
       }
-      stats.physical[myStat]--;
-      initStatus(stats);
+      myChar.status[myStat]--;
+      initStatus(myChar);
     }  
-    if(myStat === "knowledge" && stats.physical[myStat] >= 1 || myStat === "sanity" && stats.mental[myStat] >= 1){
-      //alert(stats.physical[myStat]);
-      if(stats.mental[myStat]){
+    if(myStat === "knowledgeIdx" && myChar.status[myStat] >= 1 || myStat === "sanityIdx" && myChar.status[myStat] >= 1){
+      //alert(myChar.physical[myStat]);
+      if(myChar.status[myStat]){
         //call dead function
       }
-      stats.mental[myStat]--;
-      initStatus(stats);
+      myChar.status[myStat]--;
+      initStatus(myChar);
     }    
  } 
 
 function initStatus(){
-    $("#speed").html("").append("<h1>"+stats.physical.speed+"</h1>");
-    $("#sanity").html("").append("<h1>"+stats.mental.sanity+"</h1>");
-   $("#might").html("").append("<h1>"+stats.physical.might+"</h1>"); 
-     $("#knowledge").html("").append("<h1>"+stats.mental.knowledge+"</h1>");      
+    $("#speed").html("").append("<h1>"+myChar["status-list"].speed[myChar.status.speedIdx]+"</h1>");
+    $("#sanity").html("").append("<h1>"+myChar["status-list"].sanity[myChar.status.sanityIdx]+"</h1>");
+   $("#might").html("").append("<h1>"+myChar["status-list"].might[myChar.status.mightIdx]+"</h1>"); 
+     $("#knowledge").html("").append("<h1>"+myChar["status-list"].knowledge[myChar.status.knowledgeIdx]+"</h1>");    
+
+     var status = function(stat){
+      var statList = "";
+      for(var i=0;i<7;i++){
+        var statNum = myChar["status-list"][stat][i];
+        if(myChar.status[stat+"Idx"] === i){
+         statList+="<li class='active'><a href='#'>"+statNum+"</a></li>"; 
+        }else{
+        statList+="<li><a href='#'>"+statNum+"</a></li>";
+        }
+      }
+      console.log(statList);
+      return statList;
+     };
+     $('#sanity-stats').html("").append(status("sanity")); 
+     $('#knowledge-stats').html("").append(status("knowledge")); 
+     $('#speed-stats').html("").append(status("speed")); 
+     $('#might-stats').html("").append(status("might"));
+
+
   } 
 
 function status(){
@@ -183,29 +84,29 @@ function initListOfPlayers(){
 function selectPlayer(){
   $('.list-player').on('click',function(){
     charID = $(this).data("id");
-    stats = chars[charID];
+    myChar = chars[charID];
 
-  $("#player-name h1").html("").append(chars[charID].name);
+  $("#player-name h1").html("").append(myChar.name);
   $("#player-details ul").html("").append(function(){
     var str = "";
-    for(var attrs in chars[charID].info){
-      console.log(attrs); 
-      var attr = chars[charID].info[attrs];
-      str+="<li>"+"<b>"+attrs+"</b>"+":"+" "+attr+"</li>";
+    for(var attr in myChar.info){
+      console.log(attr); 
+      var myAttr = myChar.info[attr];
+      str+="<li>"+"<b>"+attr+"</b>"+":"+" "+myAttr+"</li>";
     }
       return str;
   });
-  $("#sanity h1").html("").append(chars[charID].mental.sanity);
-  $("#knowledge h1").html("").append(chars[charID].mental.knowledge);
-  $("#speed h1").html("").append(chars[charID].physical.speed);
-  $("#might h1").html("").append(chars[charID].physical.might);
+  $("#sanity h1").html("").append(myChar["status-list"].sanity[myChar.status.sanityIdx]);
+  $("#knowledge h1").html("").append(myChar["status-list"].knowledge[myChar.status.knowledgeIdx]);
+  $("#speed h1").html("").append(myChar["status-list"].speed[myChar.status.knowledgeIdx]);
+  $("#might h1").html("").append(myChar["status-list"].might[myChar.status.mightIdx]);
 
     status(); 
   });
 }
 
 function statAdjust(){
-    var stats = chars[charID];
+    var myChar = chars[charID];
     $('.add-stat').on('click',function(){
       
       addStat($(this).attr("id"));
