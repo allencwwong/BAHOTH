@@ -30,14 +30,18 @@ var chars=
     "hobbies" : "Bugs, Basketball",
     "birthday" : "September 3rd"  
   },
-  "mental" : {
-    "sanity" : 4,
-    "knowledge" : 4
+  "status" : {
+    "sanityIdx" : 3,
+    "knowledgeIdx" : 2,
+    "speed" : 3,
+    "might" : 2
   },
-  "physical" : {
-    "speed" : 4,
-    "might" : 3
-  }
+    "status-list":{
+    "sanity" : [3,4,4,4,5,6,6,7],
+    "knowledge" : [3,4,4,5,6,7,7,8],
+    "speed" : [3,3,3,4,6,6,7,7],
+    "might" : [2,3,3,4,5,5,6,8]     
+  } 
 },
 
 {
@@ -49,14 +53,18 @@ var chars=
     "hobbies" : "Dolls, Music",
     "birthday" : "November 5th" 
   },
-  "mental" : {
-    "sanity" : 5,
-    "knowledge" : 3
-  },
-  "physical" : {
-    "speed" : 4,
+  "status" : {
+    "sanityIdx" : 2,
+    "knowledgeIdx" : 2,
+    "speed" : 3,
     "might" : 3
-  }
+  },
+    "status-list":{
+    "sanity" : [3,4,5,5,6,6,7,8],
+    "knowledge" : [1,2,3,4,4,5,5,5],
+    "speed" : [4,4,4,4,5,6,8,8],
+    "might" : [2,2,3,3,4,4,6,7]     
+  } 
 },
 
 {
@@ -68,14 +76,18 @@ var chars=
     "hobbies" : "Swimming, Medicine",
     "birthday" : "February 14th"  
   },
-  "mental" : {
-    "sanity" : 3,
-    "knowledge" : 4
-  },
-  "physical" : {
-    "speed" : 5,
+  "status" : {
+    "sanityIdx" : 2,
+    "knowledgeIdx" : 3,
+    "speed" : 2,
     "might" : 3
-  }
+  },
+    "status-list":{
+    "sanity" : [1,2,3,4,5,5,6,7],
+    "knowledge" : [2,3,4,4,5,6,6,6],
+    "speed" : [3,4,5,6,6,6,7,7],
+    "might" : [2,3,3,3,4,5,6,7]     
+  } 
 },
 
 {
@@ -87,14 +99,18 @@ var chars=
     "hobbies" : "Fencing, Gardening",
     "birthday" : "April 29th" 
   },
-  "mental" : {
-    "sanity" : 6,
-    "knowledge" : 4
-  },
-  "physical" : {
-    "speed" : 3,
+  "status" : {
+    "sanityIdx" : 4,
+    "knowledgeIdx" : 3,
+    "speed" : 2,
     "might" : 2
-  }
+  },
+    "status-list":{
+    "sanity" : [2,3,3,4,5,6,7,7],
+    "knowledge" : [1,3,3,4,5,6,6,8],
+    "speed" : [2,3,3,4,5,6,7,7],
+    "might" : [1,2,2,4,4,5,5,7]     
+  } 
 },
 
 {
@@ -106,14 +122,18 @@ var chars=
     "hobbies" : "Gaelic Music, Drama, Fine Wines ",
     "birthday" : "July 27th"  
   },
-  "mental" : {
-    "sanity" : 3,
-    "knowledge" : 5
-  },
-  "physical" : {
+  "status" : {
+    "sanityIdx" : 3,
+    "knowledgeIdx" : 5,
     "speed" : 4,
     "might" : 3
-  }
+  },
+    "status-list":{
+    "sanity" : [1,3,3,4,5,5,6,7],
+    "knowledge" : [4,5,5,5,5,6,7,8],
+    "speed" : [2,2,4,4,5,5,6,6],
+    "might" : [1,2,3,4,5,5,6,6]     
+  } 
 },
 
 {
@@ -125,14 +145,18 @@ var chars=
     "hobbies" : "Reading, Soccer",
     "birthday" : "March 4th"  
   },
-  "mental" : {
-    "sanity" : 4,
-    "knowledge" : 3
-  },
-  "physical" : {
+  "status" : {
+    "sanityIdx" : 4,
+    "knowledgeIdx" : 3,
     "speed" : 4,
     "might" : 4
-  }
+  },
+    "status-list":{
+    "sanity" : [1,1,2,4,4,4,5,6],
+    "knowledge" : [2,3,3,4,4,5,6,8],
+    "speed" : [2,3,4,4,4,5,6,8],
+    "might" : [3,4,4,4,4,5,6,8]     
+  } 
 },
 
 {
@@ -144,14 +168,18 @@ var chars=
     "hobbies" : "Television, Shopping",
     "birthday" : "Auguest 2nd"  
   },
-  "mental" : {
-    "sanity" : 3,
-    "knowledge" : 5
-  },
-  "physical" : {
+  "status" : {
+    "sanityIdx" : 3,
+    "knowledgeIdx" : 5,
     "speed" : 4,
     "might" : 3
-  }
+  },
+    "status-list":{
+    "sanity" : [3,3,3,4,5,6,6,6],
+    "knowledge" : [2,3,3,4,5,6,7,8],
+    "speed" : [3,3,4,5,6,6,7,8],
+    "might" : [3,3,3,4,5,6,7,8]     
+  } 
 },
 
 {
@@ -163,14 +191,18 @@ var chars=
     "hobbies" : "Football, Shiny Objects",
     "birthday" : "October 18th"  
   },
-  "mental" : {
-    "sanity" : 3,
-    "knowledge" : 3
-  },
-  "physical" : {
+  "status" : {
+    "sanityIdx" : 3,
+    "knowledgeIdx" : 3,
     "speed" : 4,
     "might" : 5
-  }
+  },
+    "status-list":{
+    "sanity" : [2,2,3,4,5,5,6,7],
+    "knowledge" : [2,2,3,3,5,5,6,6],
+    "speed" : [2,2,2,3,4,5,5,6],
+    "might" : [4,5,5,6,6,7,8,8]     
+  } 
 },
 
 {
@@ -182,14 +214,18 @@ var chars=
     "hobbies" : "Track, Music, Shakespearean Literature",
     "birthday" : "June 6th"  
   },
-  "mental" : {
-    "sanity" : 3,
-    "knowledge" : 3
-  },
-  "physical" : {
+  "status" : {
+    "sanityIdx" : 3,
+    "knowledgeIdx" : 3,
     "speed" : 6,
     "might" : 3
-  }
+  },
+    "status-list":{
+    "sanity" : [],
+    "knowledge" : [],
+    "speed" : [],
+    "might" : []     
+  } 
 },
 
 {
@@ -201,14 +237,18 @@ var chars=
     "hobbies" : "Astrology, Cooking, Baseball",
     "birthday" : "December 10th"  
   },
-  "mental" : {
-    "sanity" : 4,
-    "knowledge" : 4
-  },
-  "physical" : {
+  "status" : {
+    "sanityIdx" : 4,
+    "knowledgeIdx" : 4,
     "speed" : 3,
     "might" : 4
-  }
+  },
+    "status-list":{
+    "sanity" : [1,2,3,4,5,5,5,7],
+    "knowledge" : [2,3,3,4,5,5,5,7],
+    "speed" : [4,4,4,5,6,7,7,8],
+    "might" : [2,3,3,4,5,6,6,7]     
+  } 
 },
 
 {
@@ -220,14 +260,18 @@ var chars=
     "hobbies" : "Old Movies, Horses",
     "birthday" : "January 11th"  
   },
-  "mental" : {
-    "sanity" : 4,
-    "knowledge" : 5
-  },
-  "physical" : {
+  "status" : {
+    "sanityIdx" : 4,
+    "knowledgeIdx" : 5,
     "speed" : 4,
     "might" : 2
-  }
+  },
+    "status-list":{
+    "sanity" : [4,4,4,5,6,7,8,8],
+    "knowledge" : [4,5,5,5,5,6,6,7],
+    "speed" : [3,4,4,4,4,6,7,8],
+    "might" : [2,2,2,4,4,5,6,6]     
+  } 
 },
 
 {
