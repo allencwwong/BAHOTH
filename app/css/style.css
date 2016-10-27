@@ -1,0 +1,127 @@
+/**{
+  border:1px solid red;
+}*/
+a{
+  text-decoration: none;
+}
+
+.round {
+  border-radius: 50%;
+  width:125px;
+  height:125px;
+  font-size: 200%;
+  margin:10px;
+  
+}
+
+.start{
+  margin-top:50px;
+  width:175px;
+
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.start button{
+  font-size: 200% !important;
+}
+
+.selection button{
+  margin:auto !important;
+}
+.title{
+  color: green;
+  text-align: center;
+
+}
+.name{
+  color: blue;
+  text-align: center;
+}
+
+.attr{
+  height: 280px;
+  text-align: center;
+}
+
+.attr h1{
+  font-size: 250px;
+  font-weight: bold;
+  text-align: center;
+  margin:0px;
+  padding: 0px;
+}
+
+.btn{
+  text-align: center;
+  
+}
+
+.stats{
+  list-style: none;
+}
+
+.stats li{
+  float:left;
+  width:40px;
+  height:40px;
+  border:1px solid #aaa;
+  border-radius: 50%;
+  font-size: 18px;
+  padding:6px 0 0 14px;
+  margin:0 5px;
+}
+
+.stats .active{
+  background-color:blue;
+}
+
+@media screen and (min-width:321px) and (max-width:480px){
+  .col-xs-12{
+    width:100%;
+  }
+  .col-xs-6{
+    width:50%;
+  }
+  .stats li{
+    font-size:14px !important;
+    width:28px;
+    height:28px;
+  }
+  .stats{
+    padding:0px;
+  }
+  .add-stat,.subt-stat{
+    padding:0px;
+    margin:0px;
+  }  
+  .title{
+    font-size:18px !important;
+
+  }
+  .attr h1{
+    font-size:100px !important;
+  }
+  .attr{
+    height: 120px;
+  }
+}
+
+@media screen and (max-width:320px){
+  .stats li{
+    font-size:12px !important;
+    width:20px;
+    height:20px;
+    padding:2px 2px;
+  }
+
+  .stats{
+    padding:0px !important;
+  }
+
+  .add-stat,.subt-stat{
+    width:5%;
+    padding:0px;
+    margin:0px;
+  }
+}
