@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+});
 var chars = [
 {
   "name" : "Brandon Jaspers",
@@ -17,7 +19,12 @@ var chars = [
   "physical" : {
   	"speed" : 4,
   	"might" : 4
+  },
+  "id": {
+    "number": 1,
+    "position" : "front"
   }
+
 },
 {
   "name" : "Peter Akimoto",
@@ -35,6 +42,10 @@ var chars = [
   "physical" : {
   	"speed" : 4,
   	"might" : 3
+  },
+  "id": {
+    "number": 1,
+    "position" : "back"
   }
 },
 
@@ -54,6 +65,10 @@ var chars = [
   "physical" : {
   	"speed" : 4,
   	"might" : 3
+  },
+  "id": {
+    "number": 2,
+    "position" : "front"
   }
 },
 
@@ -73,6 +88,10 @@ var chars = [
   "physical" : {
   	"speed" : 5,
   	"might" : 3
+  },
+  "id": {
+    "number": 2,
+    "position" : "back"
   }
 },
 
@@ -92,6 +111,10 @@ var chars = [
   "physical" : {
   	"speed" : 3,
   	"might" : 2
+  },
+  "id": {
+    "number": 3,
+    "position" : "front"
   }
 },
 
@@ -111,13 +134,149 @@ var chars = [
   "physical" : {
   	"speed" : 4,
   	"might" : 3
+  },
+  "id": {
+    "number": 3,
+    "position" : "back"
   }
 },
 
 {
+  "name" : "Jenny LeClerc",
+  "info" : {
+    "age" : "21",
+    "height" : "5' 7",
+    "weight" : "142 lbs",
+    "hobbies" : "Reading, Soccer",
+    "birthday" : "March 4th"
+  },
+  "mental" : {
+    "sanity" : 4,
+    "knowledge" : 3
+  },
+  "physical" : {
+    "speed" : 4,
+    "might" : 4
+  },
+  "id": {
+    "number": 4,
+    "position" : "front"
+  }
+},
 
+{
+  "name" : "Heather Granville",
+  "info" : {
+    "age" : "18",
+    "height" : "5' 2",
+    "weight" : "120 lbs",
+    "hobbies" : "Television, Shopping",
+    "birthday" : "Auguest 2nd"
+  },
+  "mental" : {
+    "sanity" : 3,
+    "knowledge" : 5
+  },
+  "physical" : {
+    "speed" : 4,
+    "might" : 3
+  },
+  "id": {
+    "number": 4,
+    "position" : "front"
+  }
+},
+
+{
+  "name" : "Ox Bellows",
+  "info" : {
+    "age" : "23",
+    "height" : "6' 4",
+    "weight" : "288 lbs",
+    "hobbies" : "Football, Shiny Objects",
+    "birthday" : "October 18th"
+  },
+  "mental" : {
+    "sanity" : 3,
+    "knowledge" : 3
+  },
+  "physical" : {
+    "speed" : 4,
+    "might" : 5
+  },
+  "id": {
+    "number": 5,
+    "position" : "front"
+  }
+},
+
+{
+  "name" : "Darrin \"Flash\" Williams",
+  "info" : {
+    "age" : "20",
+    "height" : "5' 11",
+    "weight" : "188 lbs",
+    "hobbies" : "Track, Music, Shakespearean Literature",
+    "birthday" : "June 6th"
+  },
+  "mental" : {
+    "sanity" : 3,
+    "knowledge" : 3
+  },
+  "physical" : {
+    "speed" : 6,
+    "might" : 3
+  },
+  "id": {
+    "number": 5,
+    "position" : "back"
+  }
+},
+
+{
+  "name" : "Madame Zostra",
+  "info" : {
+    "age" : "37",
+    "height" : "5' 0",
+    "weight" : "150 lbs",
+    "hobbies" : "Astrology, Cooking, Baseball",
+    "birthday" : "December 10th"
+  },
+  "mental" : {
+    "sanity" : 4,
+    "knowledge" : 4
+  },
+  "physical" : {
+    "speed" : 3,
+    "might" : 4
+  },
+  "id": {
+    "number": 6,
+    "position" : "front"
+  }
+},
+
+{
+  "name" : "Vivian Lopez",
+  "info" : {
+    "age" : "42",
+    "height" : "5' 5",
+    "weight" : "142 lbs",
+    "hobbies" : "Old Movies, Horses",
+    "birthday" : "January 11th"
+  },
+  "mental" : {
+    "sanity" : 4,
+    "knowledge" : 5
+  },
+  "physical" : {
+    "speed" : 4,
+    "might" : 2
+  },
+  "id": {
+    "number": 6,
+    "position" : "back"
+  }
 }
+
 ];
-console.log(chars[5]);
-});
-console.log("chivkrn tuesday");
